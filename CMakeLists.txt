@@ -14,7 +14,7 @@ set(GTK_LIBS "${GTK_LIBS} -pthread -I/usr/include/gtkmm-3.0 -I/usr/lib/gtkmm-3.0
 -lgiomm-2.4 -lpangomm-1.4 -lglibmm-2.4 -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lgio-2.0 \
 -lcairomm-1.0 -lcairo -lsigc-2.0 -lgdk_pixbuf-2.0 -lgobject-2.0 -lglib-2.0")
 
-set(GST_LIBS "${GST_LIBS} -I/usr/include/gstreamer-1.0")
+set(GST_LIBS "${GST_LIBS} -I/usr/include/gstreamer-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0")
 
 set(LIBS "${LIBS} ${GTK_LIBS} ${GST_LIBS}")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 ${LIBS}")
