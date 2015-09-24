@@ -4,8 +4,13 @@
  * Author:Jeroen Mathon
  */
 
+#include "audio_mgr.h"
+
 int main(int argc, char **argv)
 {
+    audioManager aManager(argc, argv);
+    aManager.setFile("");
+    aManager.setState(aManager.PLAY);
 
     return 0;
 }
