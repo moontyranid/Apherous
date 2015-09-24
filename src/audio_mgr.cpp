@@ -4,11 +4,19 @@
 
 #include "audio_mgr.h"
 
+/*
+ * Function:Constructor
+ * Description:Initializes the needed variables and objects.
+ */
 audioManager::audioManager(int argc, char  **argv)
 {
     gst_init(&argc, &argv);
 }
 
+/*
+ * Function:Destructor
+ * Description:Frees resources
+ */
 audioManager::~audioManager()
 {
     gst_message_unref(msg);
@@ -17,6 +25,10 @@ audioManager::~audioManager()
     gst_object_unref(pipeline);
 }
 
+/*
+ * Function:setState(int state)
+ * Description:Sets the state of the media player
+ */
 void audioManager::setState(int state)
 {
     switch(state)
@@ -39,6 +51,10 @@ void audioManager::setState(int state)
     }
 }
 
+/*
+ * Function:setStream(std::string uri)
+ * Description:Sets the stream to read data from for the media player
+ */
 void audioManager::setStream(std::string uri)
 {
     std::stringstream uriStream;
