@@ -7,6 +7,8 @@
 audioManager::audioManager(int argc, char  **argv)
 {
     gst_init(&argc, &argv);
+
+
 }
 
 audioManager::~audioManager()
@@ -23,12 +25,13 @@ void audioManager::setState(int state)
     switch(state)
     {
         case PLAY:
-            std::thread playThread(gst_element_set_state(pipeline, GST_STATE_PLAYING));
+        {
+            gst_element_set_state(pipeline, GST_STATE_PLAYING);
             bus = gst_element_get_bus(pipeline);
-            msg = gst_bus_timed_pop_filtered(bus, GST_CLOCK_TIME_NONE, GstMessageType(GST_MESSAGE_ERROR |
-                                                GST_MESSAGE_EOS ));
-
+            msg = gst_bus_timed_pop_filtered(bus, GST_CLOCK_TIME_NONE, GstMessageType(GST_MESSAGE_ERROR
+                                                                                      | GST_MESSAGE_EOS));
             break;
+        }
 
         case PAUSE:
             gst_element_set_state(pipeline, GST_STATE_PAUSED);
