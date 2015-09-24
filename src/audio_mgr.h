@@ -8,6 +8,7 @@
 #include <iostream>
 #include <sstream>
 #include <gst/gst.h>
+#include <thread>
 
 class audioManager
 {
