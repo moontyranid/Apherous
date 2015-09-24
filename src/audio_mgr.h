@@ -17,8 +17,8 @@ public:
     ~audioManager();
 
     // Public routines
-    void setState(int state);    // Manages the state the audio is in
-    void setFile(std::string uri);
+    void setState(int state);         // Manages the state the audio is in
+    void setStream(std::string uri);  // Sets the stream to read from
 
     // Public variables
     enum    // An enumeration of the state the audio manager can be in

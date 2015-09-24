@@ -39,7 +39,7 @@ void audioManager::setState(int state)
     }
 }
 
-void audioManager::setFile(std::string uri)
+void audioManager::setStream(std::string uri)
 {
     std::stringstream uriStream;
     uriStream << "playbin uri=" << uri;
