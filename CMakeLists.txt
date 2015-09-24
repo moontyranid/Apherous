@@ -18,10 +18,10 @@ set(GTK_LIBS "${GTK_LIBS} -pthread -I/usr/include/gtkmm-3.0 -I/usr/lib/gtkmm-3.0
 set(LIBS "${LIBS} ${GTK_LIBS}")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 ${LIBS}")
 
-set(SOURCE_FILES src/main.cpp src/gtki.cpp src/translate.cpp)
-add_executable(Binary_to_Ascii_Translator ${SOURCE_FILES})
+set(SOURCE_FILES src/main.cpp)
+add_executable(Apherous ${SOURCE_FILES})
 
-file(COPY ${PROJECT_SOURCE_DIR}/src/ui DESTINATION ${PROJECT_BINARY_DIR})
+#file(COPY ${PROJECT_SOURCE_DIR}/src/ui DESTINATION ${PROJECT_BINARY_DIR})
 
 
 
