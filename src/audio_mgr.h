@@ -5,12 +5,12 @@
 #ifndef BINARY_TO_ASCII_TRANSLATOR_AUDIO_MGR_H
 #define BINARY_TO_ASCII_TRANSLATOR_AUDIO_MGR_H
 
-class audioManger
+class audioManager
 {
 public:
     // Constructor and Destructor
-    audioManger();
-    ~audioManger();
+    audioManager();
+    ~audioManager();
 
     // Public routines
 
