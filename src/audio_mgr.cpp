@@ -30,10 +30,10 @@ void audioManager::setState(int state)
             break;
 
         case PAUSE:
-            break;
+            gst_element_set_state(pipeline, GST_STATE_PAUSED);
 
         case STOP:
-            break;
+            gst_element_set_state(pipeline, GST_STATE_NULL);
 
         default:
             break;
@@ -43,7 +43,11 @@ void audioManager::setState(int state)
 void audioManager::setStream(std::string uri)
 {
     std::stringstream uriStream;
-    uriStream << "playbin uri=" << uri;
+    uriStream << "playbin uri=\"" << uri << "\"";
     const char *uriChar = uriStream.str().c_str();
-    pipeline = gst_parse_launch(uriChar, NULL);
+    pipeline = gst_parse_launch(uriChar, &gError);
+    if(gError != nullptr)
+    {
+        std::cout << "Glib Error:" << gError->message << "\n";
+    }
 }

@@ -9,7 +9,7 @@
 int main(int argc, char **argv)
 {
     audioManager aManager(argc, argv);
-    aManager.setStream("");
+    aManager.setStream("file:///home/jeroen/test.mp3");
     aManager.setState(aManager.PLAY);
 
     return 0;
