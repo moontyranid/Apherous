@@ -7,8 +7,6 @@
 audioManager::audioManager(int argc, char  **argv)
 {
     gst_init(&argc, &argv);
-
-
 }
 
 audioManager::~audioManager()
