@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.3)
 project(Binary_to_Ascii_Translator)
 
+
 set(GTK_LIBS "${GTK_LIBS} -pthread -I/usr/include/gtkmm-3.0 -I/usr/lib/gtkmm-3.0/include -I/usr/include/atkmm-1.6 \
 -I/usr/include/gtk-3.0/unix-print -I/usr/include/gdkmm-3.0 -I/usr/lib/gdkmm-3.0/include -I/usr/include/giomm-2.4 \
 -I/usr/lib/giomm-2.4/include -I/usr/include/pangomm-1.4 -I/usr/lib/pangomm-1.4/include -I/usr/include/glibmm-2.4 \
@@ -14,11 +15,12 @@ set(GTK_LIBS "${GTK_LIBS} -pthread -I/usr/include/gtkmm-3.0 -I/usr/lib/gtkmm-3.0
 -lgiomm-2.4 -lpangomm-1.4 -lglibmm-2.4 -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lgio-2.0 \
 -lcairomm-1.0 -lcairo -lsigc-2.0 -lgdk_pixbuf-2.0 -lgobject-2.0 -lglib-2.0")
 
+set(GST_LIBS "${GST_LIBS} -I/usr/include/gstreamer-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0")
 
-set(LIBS "${LIBS} ${GTK_LIBS}")
+set(LIBS "${LIBS} ${GTK_LIBS} ${GST_LIBS}")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 ${LIBS}")
 
-set(SOURCE_FILES src/main.cpp)
+set(SOURCE_FILES src/main.cpp src/audio_mgr.cpp src/audio_mgr.h)
 add_executable(Apherous ${SOURCE_FILES})
 
 #file(COPY ${PROJECT_SOURCE_DIR}/src/ui DESTINATION ${PROJECT_BINARY_DIR})
