@@ -50,8 +50,8 @@ void audioManager::setStream(std::string uri)
 {
     std::stringstream uriStream;
     uriStream << "playbin uri=\"" << uri << "\"";
-    const char *uriChar = uriStream.str().c_str();
-    pipeline = gst_parse_launch(uriChar, &gError);
+
+    pipeline = gst_parse_launch(uriStream.str().c_str(), &gError);
     if(gError != nullptr)
     {
         std::cout << "Glib Error:" << gError->message << "\n";
