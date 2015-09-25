@@ -1,7 +1,7 @@
 var NAVTREEINDEX0 =
 {
 "annotated.html":[0,0],
-"audio__mgr_8h_source.html":[1,0,0,0],
+"audio__mgr_8h_source.html":[1,0,0,0,0,0,0,0,0],
 "classaudio_manager.html":[0,0,0],
 "classaudio_manager.html#a27cdb7486e1793df14a42fed62aaf673":[0,0,0,3],
 "classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2":[0,0,0,0],
@@ -12,7 +12,12 @@ var NAVTREEINDEX0 =
 "classaudio_manager.html#ac33c12e5070a2fb80fce9f231999995d":[0,0,0,1],
 "classaudio_manager.html#ae8e0e3c82b018fda14157b1169bf76e3":[0,0,0,4],
 "classes.html":[0,1],
-"dir_68267d1309a1af8e8297ef4c3efbcdba.html":[1,0,0],
+"dir_096157bb6ae6294e0a6936e8ba3a61ce.html":[1,0,0,0,0,0,0,0],
+"dir_0fe90e84d828270282c9bd65c94f7e0b.html":[1,0,0,0,0,0],
+"dir_4b22e54d7b382c3fdc532ff2f9756cc8.html":[1,0,0,0],
+"dir_75b82e7e4a5feb05200b9ad7adf06257.html":[1,0,0],
+"dir_7ac739ee3fb1f44a4897aa6c63880818.html":[1,0,0,0,0,0,0],
+"dir_c751dbf8581811e217abef9b2e74f435.html":[1,0,0,0,0],
 "files.html":[1,0],
 "functions.html":[0,2,0],
 "functions_enum.html":[0,2,2],
