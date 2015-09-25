@@ -8,3 +8,6 @@ Feel free to fork and make pull requests, Every little bit of help is greatly ap
 
 ### Development
 Development information can be found on [this page](https://github.com/JeroenMathon/Apherous/wiki/Development)
+
+### Documentation
+The documentation of this project can be found [here](http://jeroenmathon.github.io/Apherous/doxy/html/)
