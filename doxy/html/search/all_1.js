@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['setstate',['setState',['../classaudio_manager.html#a27cdb7486e1793df14a42fed62aaf673',1,'audioManager']]],
-  ['setstream',['setStream',['../classaudio_manager.html#ae8e0e3c82b018fda14157b1169bf76e3',1,'audioManager']]]
+  ['pause',['PAUSE',['../classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2a291554596c183e837f0a6bec3767c891',1,'audioManager']]],
+  ['play',['PLAY',['../classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2a6a216efc529825c60a4a4c0bc99ad77f',1,'audioManager']]]
 ];

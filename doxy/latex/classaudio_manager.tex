@@ -1,13 +1,21 @@
 \hypertarget{classaudio_manager}{}\section{audio\+Manager Class Reference}
 \label{classaudio_manager}\index{audio\+Manager@{audio\+Manager}}
+
+
+Audio Manager.  
+
+
+
+
+{\ttfamily \#include $<$audio\+\_\+mgr.\+h$>$}
+
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classaudio_manager_ab797eef674719ab555f3bc0da5f3e8e9}{}enum \{ {\bfseries P\+L\+A\+Y}, 
-{\bfseries P\+A\+U\+S\+E}, 
-{\bfseries S\+T\+O\+P}
- \}\label{classaudio_manager_ab797eef674719ab555f3bc0da5f3e8e9}
-\begin{DoxyCompactList}\small\item\em Sets the stream to read from. \end{DoxyCompactList}
+enum \hyperlink{classaudio_manager_aa37cded78cf789d8931208a0c6494af2}{audio\+States} \{ \hyperlink{classaudio_manager_aa37cded78cf789d8931208a0c6494af2a6a216efc529825c60a4a4c0bc99ad77f}{audio\+States\+::\+P\+L\+A\+Y}, 
+\hyperlink{classaudio_manager_aa37cded78cf789d8931208a0c6494af2a291554596c183e837f0a6bec3767c891}{audio\+States\+::\+P\+A\+U\+S\+E}, 
+\hyperlink{classaudio_manager_aa37cded78cf789d8931208a0c6494af2a615a46af313786fc4e349f34118be111}{audio\+States\+::\+S\+T\+O\+P}
+ \}\begin{DoxyCompactList}\small\item\em An enumeration of the states that the audio manager can be in. \end{DoxyCompactList}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -22,6 +30,32 @@ void \hyperlink{classaudio_manager_ae8e0e3c82b018fda14157b1169bf76e3}{set\+Strea
 \begin{DoxyItemize}
 \item This sets the audio stream/file to use for the audio player. 
 \end{DoxyItemize}\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Audio Manager. 
+
+This class contains a set of functions for controlling the audio in the program. 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classaudio_manager_aa37cded78cf789d8931208a0c6494af2}{}\index{audio\+Manager@{audio\+Manager}!audio\+States@{audio\+States}}
+\index{audio\+States@{audio\+States}!audio\+Manager@{audio\+Manager}}
+\subsubsection[{audio\+States}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf audio\+Manager\+::audio\+States}\hspace{0.3cm}{\ttfamily [strong]}}\label{classaudio_manager_aa37cded78cf789d8931208a0c6494af2}
+
+
+An enumeration of the states that the audio manager can be in. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{P\+L\+A\+Y@{P\+L\+A\+Y}!audio\+Manager@{audio\+Manager}}\index{audio\+Manager@{audio\+Manager}!P\+L\+A\+Y@{P\+L\+A\+Y}}\item[{\em 
+\hypertarget{classaudio_manager_aa37cded78cf789d8931208a0c6494af2a6a216efc529825c60a4a4c0bc99ad77f}{}P\+L\+A\+Y\label{classaudio_manager_aa37cded78cf789d8931208a0c6494af2a6a216efc529825c60a4a4c0bc99ad77f}
+}]0 \index{P\+A\+U\+S\+E@{P\+A\+U\+S\+E}!audio\+Manager@{audio\+Manager}}\index{audio\+Manager@{audio\+Manager}!P\+A\+U\+S\+E@{P\+A\+U\+S\+E}}\item[{\em 
+\hypertarget{classaudio_manager_aa37cded78cf789d8931208a0c6494af2a291554596c183e837f0a6bec3767c891}{}P\+A\+U\+S\+E\label{classaudio_manager_aa37cded78cf789d8931208a0c6494af2a291554596c183e837f0a6bec3767c891}
+}]1 \index{S\+T\+O\+P@{S\+T\+O\+P}!audio\+Manager@{audio\+Manager}}\index{audio\+Manager@{audio\+Manager}!S\+T\+O\+P@{S\+T\+O\+P}}\item[{\em 
+\hypertarget{classaudio_manager_aa37cded78cf789d8931208a0c6494af2a615a46af313786fc4e349f34118be111}{}S\+T\+O\+P\label{classaudio_manager_aa37cded78cf789d8931208a0c6494af2a615a46af313786fc4e349f34118be111}
+}]2 \end{description}
+\end{Desc}
 
 
 \subsection{Member Function Documentation}

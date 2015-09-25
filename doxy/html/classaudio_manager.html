@@ -111,14 +111,19 @@ $(document).ready(function(){initNavTree('classaudio_manager.html','');});
 <div class="title">audioManager Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Audio Manager.  
+ <a href="classaudio_manager.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="audio__mgr_8h_source.html">audio_mgr.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ab797eef674719ab555f3bc0da5f3e8e9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab797eef674719ab555f3bc0da5f3e8e9"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>PLAY</b>, 
-<b>PAUSE</b>, 
-<b>STOP</b>
- }<tr class="memdesc:ab797eef674719ab555f3bc0da5f3e8e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the stream to read from. <br /></td></tr>
-<tr class="separator:ab797eef674719ab555f3bc0da5f3e8e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa37cded78cf789d8931208a0c6494af2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2">audioStates</a> { <a class="el" href="classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2a6a216efc529825c60a4a4c0bc99ad77f">audioStates::PLAY</a>, 
+<a class="el" href="classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2a291554596c183e837f0a6bec3767c891">audioStates::PAUSE</a>, 
+<a class="el" href="classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2a615a46af313786fc4e349f34118be111">audioStates::STOP</a>
+ }<tr class="memdesc:aa37cded78cf789d8931208a0c6494af2"><td class="mdescLeft">&#160;</td><td class="mdescRight">An enumeration of the states that the audio manager can be in.  <a href="classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2">More...</a><br /></td></tr>
+<tr class="separator:aa37cded78cf789d8931208a0c6494af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -136,6 +141,43 @@ Public Member Functions</h2></td></tr>
  <a href="#ae8e0e3c82b018fda14157b1169bf76e3">More...</a><br /></td></tr>
 <tr class="separator:ae8e0e3c82b018fda14157b1169bf76e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Audio Manager. </p>
+<p>This class contains a set of functions for controlling the audio in the program. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="aa37cded78cf789d8931208a0c6494af2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2">audioManager::audioStates</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>An enumeration of the states that the audio manager can be in. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="aa37cded78cf789d8931208a0c6494af2a6a216efc529825c60a4a4c0bc99ad77f"></a>PLAY&#160;</td><td class="fielddoc">
+<p>0 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa37cded78cf789d8931208a0c6494af2a291554596c183e837f0a6bec3767c891"></a>PAUSE&#160;</td><td class="fielddoc">
+<p>1 </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="aa37cded78cf789d8931208a0c6494af2a615a46af313786fc4e349f34118be111"></a>STOP&#160;</td><td class="fielddoc">
+<p>2 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a27cdb7486e1793df14a42fed62aaf673"></a>
 <div class="memitem">
@@ -152,7 +194,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Sets the state of the audio player. </p>
-<p>This function can be called from the <a class="el" href="classaudio_manager.html">audioManager</a> class</p>
+<p>This function can be called from the <a class="el" href="classaudio_manager.html" title="Audio Manager. ">audioManager</a> class</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">int</td><td>state: The state top put the audio player in.(Being PLAY,PAUSE or STOP) </td></tr>

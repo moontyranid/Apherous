@@ -29,7 +29,7 @@ void audioManager::setState(int state)
 {
     switch(state)
     {
-        case PLAY:
+        case int(audioStates::PLAY):
         {
             gst_element_set_state(pipeline, GST_STATE_PLAYING);
             bus = gst_element_get_bus(pipeline);
@@ -38,11 +38,11 @@ void audioManager::setState(int state)
             break;
         }
 
-        case PAUSE:
+        case int(audioStates::PAUSE):
             gst_element_set_state(pipeline, GST_STATE_PAUSED);
             break;
 
-        case STOP:
+        case int(audioStates::STOP):
             gst_element_set_state(pipeline, GST_STATE_NULL);
             break;
 

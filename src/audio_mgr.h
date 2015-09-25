@@ -9,6 +9,10 @@
 #include <sstream>
 #include <gst/gst.h>
 
+/// Audio Manager
+/** This class contains a set of functions for controlling the
+ * audio in the program.
+ **/
 class audioManager
 {
 public:
@@ -17,15 +21,16 @@ public:
     ~audioManager();
 
     // Public routines
-    void setState(int state);
-    void setStream(std::string uri);  /// Sets the stream to read from
+    void setState(int state); // Sets the state of the audio player
+    void setStream(std::string uri);  // Sets the stream to read from
 
     // Public variables
-    enum    // An enumeration of the state the audio manager can be in
+    /// An enumeration of the states that the audio manager can be in
+    enum class audioStates
     {
-        PLAY,
-        PAUSE,
-        STOP
+        PLAY, ///< 0
+        PAUSE, ///< 1
+        STOP ///< 2
     };
 
 private:
