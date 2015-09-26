@@ -15,11 +15,13 @@ public:
     ~gtkInterface();
 
     // Public routines
-    void run();
+    int run();
+
+    // Public variables
+    Gtk::Window *window;
 
 private:
     // Private variables
-    Gtk::Window *window;
     Glib::RefPtr<Gtk::Builder> builder = Gtk::Builder::create_from_file("ui/ui.glade");
 
 };

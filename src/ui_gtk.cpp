@@ -6,7 +6,7 @@
 
 gtkInterface::gtkInterface()
 {
-
+    builder->get_widget("window", window);
 }
 
 gtkInterface::~gtkInterface()
@@ -14,7 +14,7 @@ gtkInterface::~gtkInterface()
 
 }
 
-void gtkInterface::run()
+int gtkInterface::run()
 {
-
+    window->show();
 }

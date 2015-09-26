@@ -23,7 +23,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 ${LIBS}")
 set(SOURCE_FILES src/main.cpp src/audio_mgr.cpp src/audio_mgr.h src/ui_gtk.cpp src/ui_gtk.h)
 add_executable(Apherous ${SOURCE_FILES})
 
-#file(COPY ${PROJECT_SOURCE_DIR}/src/ui DESTINATION ${PROJECT_BINARY_DIR})
+file(COPY ${PROJECT_SOURCE_DIR}/src/ui DESTINATION ${PROJECT_BINARY_DIR})
 
 
 
