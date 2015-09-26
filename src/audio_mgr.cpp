@@ -4,6 +4,43 @@
 
 #include "audio_mgr.h"
 
+static gboolean bus_call(GstBus *bus, GstMessage *msg, gpointer data)
+{
+    GMainLoop *loop = (GMainLoop *) data;
+
+    switch(GST_MESSAGE_TYPE(msg))
+    {
+        case GST_MESSAGE_EOS:
+        {
+            g_print("End of stream\n");
+            g_main_loop_quit(loop);
+            break;
+        }
+
+        case GST_MESSAGE_ERROR:
+        {
+            gchar *debug;
+            GError *error;
+
+            gst_message_parse_error(msg, &error, &debug);
+            g_free(debug);
+
+            g_printerr("Error: %s\n", error->message);
+            g_free(error);
+
+            g_main_loop_quit(loop);
+            break;
+        }
+
+        default:
+        {
+            break;
+        }
+    }
+
+    return TRUE;
+}
+
 audioManager::audioManager(int argc, char  **argv)
 {
     gst_init(&argc, &argv);
