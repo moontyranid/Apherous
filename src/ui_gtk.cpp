@@ -25,19 +25,26 @@ gtkInterface::~gtkInterface()
 void gtkInterface::playBtnOnClick()
 {
     std::cout << "Playing\n";
+    aManager->setState(int(audioManager::audioStates::PLAY));
 }
 
 void gtkInterface::pauseBtnOnClick()
 {
     std::cout << "Pausing\n";
+    aManager->setState(int(audioManager::audioStates::PAUSE));
 }
 
 void gtkInterface::stopBtnOnClick()
 {
+    aManager->setState(int(audioManager::audioStates::STOP));
     std::cout << "Stopping\n";
 }
 
-int gtkInterface::run()
+int gtkInterface::run(int argc, char **argv)
 {
+    _argc = argc;
+    _argv = argv;
+    aManager = new audioManager(_argc, _argv);
+    aManager->setStream("file:///home/jeroen/test.mp3");
     window->show();
 }

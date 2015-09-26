@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <gtkmm.h>
+#include "audio_mgr.h"
 
 class gtkInterface
 {
@@ -16,7 +17,7 @@ public:
     ~gtkInterface();
 
     // Public routines
-    int run();
+    int run(int argc, char **argv);
 
     // Public variables
     Gtk::Window *window;
@@ -33,5 +34,9 @@ private:
     Gtk::Button *playBtn;
     Gtk::Button *pauseBtn;
     Gtk::Button *stopBtn;
+
+    audioManager *aManager;
+    int _argc;
+    char **_argv;
 };
 #endif //APHEROUS_UI_GTK_H
