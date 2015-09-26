@@ -38,6 +38,6 @@ private:
     GstElement *pipeline;
     GstBus *bus;
     GstMessage *msg;
-    GError *gError;
+    GError *gError = NULL;
 };
 #endif //BINARY_TO_ASCII_TRANSLATOR_AUDIO_MGR_H
