@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.3)
-project(Binary_to_Ascii_Translator)
+project(Apherous)
 
 
 set(GTK_LIBS "${GTK_LIBS} -pthread -I/usr/include/gtkmm-3.0 -I/usr/lib/gtkmm-3.0/include -I/usr/include/atkmm-1.6 \
@@ -20,10 +20,10 @@ set(GST_LIBS "${GST_LIBS} -I/usr/include/gstreamer-1.0 -lgstreamer-1.0 -lgobject
 set(LIBS "${LIBS} ${GTK_LIBS} ${GST_LIBS}")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 ${LIBS}")
 
-set(SOURCE_FILES src/main.cpp src/audio_mgr.cpp src/audio_mgr.h)
+set(SOURCE_FILES src/main.cpp src/audio_mgr.cpp src/audio_mgr.h src/ui_gtk.cpp src/ui_gtk.h)
 add_executable(Apherous ${SOURCE_FILES})
 
-#file(COPY ${PROJECT_SOURCE_DIR}/src/ui DESTINATION ${PROJECT_BINARY_DIR})
+file(COPY ${PROJECT_SOURCE_DIR}/src/ui DESTINATION ${PROJECT_BINARY_DIR})
 
 
 
