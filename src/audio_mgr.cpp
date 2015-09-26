@@ -55,6 +55,8 @@ audioManager::~audioManager()
     gst_object_unref(bus);
     gst_element_set_state(pipeline, GST_STATE_NULL);
     gst_object_unref(pipeline);
+    g_source_remove(bus_watch_id);
+    g_main_loop_unref(loop);
 }
 /**
  *****************************************************************************************
