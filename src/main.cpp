@@ -4,8 +4,8 @@
  * Author:Jeroen Mathon
  */
 
-#define GUI "gtk"
-//#define GUI "cli"
+//#define GUI "gtk"
+#define GUI "cli"
 
 #include "audio_mgr.h"
 #include "ui_gtk.h"
@@ -22,7 +22,7 @@ int main(int argc, char **argv)
         return app->run(*gInterface.window);
     }
 
-    /*
+
     else if(GUI == "cli")
     {
         audioManager aManager(argc, argv);
@@ -31,7 +31,7 @@ int main(int argc, char **argv)
 
         return 0;
     }
-    */
+
 
     return 0;
 }
