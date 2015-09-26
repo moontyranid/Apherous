@@ -5,6 +5,7 @@
 #ifndef APHEROUS_UI_GTK_H
 #define APHEROUS_UI_GTK_H
 
+#include <iostream>
 #include <gtkmm.h>
 
 class gtkInterface
@@ -21,8 +22,16 @@ public:
     Gtk::Window *window;
 
 private:
+    // Private routines
+    void playBtnOnClick();
+    void pauseBtnOnClick();
+    void stopBtnOnClick();
+
     // Private variables
     Glib::RefPtr<Gtk::Builder> builder = Gtk::Builder::create_from_file("ui/ui.glade");
-
+    Gtk::Box *controlBox;
+    Gtk::Button *playBtn;
+    Gtk::Button *pauseBtn;
+    Gtk::Button *stopBtn;
 };
 #endif //APHEROUS_UI_GTK_H
