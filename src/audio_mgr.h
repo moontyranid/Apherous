@@ -8,6 +8,7 @@
 #include <iostream>
 #include <sstream>
 #include <gst/gst.h>
+#include <glib.h>
 
 /// Audio Manager
 /** This class contains a set of functions for controlling the
@@ -34,7 +35,9 @@ public:
     };
 
 private:
-    // Private variables
+    // Private variablesF
+    GMainLoop *loop;
+    guint bus_watch_id;
     GstElement *pipeline;
     GstBus *bus;
     GstMessage *msg;
