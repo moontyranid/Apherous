@@ -15,7 +15,7 @@ int main(int argc, char **argv)
     if(GUI == "gtk")
     {
         Glib::RefPtr<Gtk::Application> app =
-                Gtk::Application::create(argc, argv, "Binary to Ascii Translator");
+                Gtk::Application::create(argc, argv, "JeroenMathon.Apherous");
         gtkInterface gInterface;
         gInterface.run(argc, argv);
 
