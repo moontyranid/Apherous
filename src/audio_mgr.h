@@ -35,12 +35,12 @@ public:
     };
 
 private:
-    // Private variablesF
-    GMainLoop *loop;
-    guint bus_watch_id;
-    GstElement *pipeline;
-    GstBus *bus;
-    GstMessage *msg;
-    GError *gError = NULL;
+    // Private variables
+    GMainLoop *loop;         /// The GLIB's main loop to be used in the class.
+    guint bus_watch_id;      /// The id of the bus watch
+    GstElement *pipeline;    /// The pipe line to use for the audio
+    GstBus *bus;             /// The bus to relay messages trough
+    GstMessage *msg;         /// The message for the bus
+    GError *gError = NULL;   /// The error container
 };
 #endif //BINARY_TO_ASCII_TRANSLATOR_AUDIO_MGR_H
