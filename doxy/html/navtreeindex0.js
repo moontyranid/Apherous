@@ -1,7 +1,7 @@
 var NAVTREEINDEX0 =
 {
 "annotated.html":[0,0],
-"audio__mgr_8h_source.html":[1,0,0,0,0,0,0,0,0],
+"audio__mgr_8h_source.html":[1,0,0,0,0],
 "classaudio_manager.html":[0,0,0],
 "classaudio_manager.html#a27cdb7486e1793df14a42fed62aaf673":[0,0,0,3],
 "classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2":[0,0,0,0],
@@ -12,16 +12,18 @@ var NAVTREEINDEX0 =
 "classaudio_manager.html#ac33c12e5070a2fb80fce9f231999995d":[0,0,0,1],
 "classaudio_manager.html#ae8e0e3c82b018fda14157b1169bf76e3":[0,0,0,4],
 "classes.html":[0,1],
-"dir_096157bb6ae6294e0a6936e8ba3a61ce.html":[1,0,0,0,0,0,0,0],
-"dir_0fe90e84d828270282c9bd65c94f7e0b.html":[1,0,0,0,0,0],
-"dir_4b22e54d7b382c3fdc532ff2f9756cc8.html":[1,0,0,0],
-"dir_75b82e7e4a5feb05200b9ad7adf06257.html":[1,0,0],
-"dir_7ac739ee3fb1f44a4897aa6c63880818.html":[1,0,0,0,0,0,0],
-"dir_c751dbf8581811e217abef9b2e74f435.html":[1,0,0,0,0],
+"classgtk_interface.html":[0,0,1],
+"classgtk_interface.html#a26ee295c6960b3dd4b39bb01bb06f338":[0,0,1,1],
+"classgtk_interface.html#aad41380fb5de22782e6540cf8dc766ab":[0,0,1,2],
+"classgtk_interface.html#aaf0c3d5976a7e08bb91555c2bbd5fb54":[0,0,1,0],
+"classgtk_interface.html#ab7b39bc3e113179d8ec75655508ab1cc":[0,0,1,3],
+"dir_a13819cf82ad6cf6b76e249e2687c215.html":[1,0,0],
+"dir_d0c92e01e4992f9368e8537032c7b135.html":[1,0,0,0],
 "files.html":[1,0],
 "functions.html":[0,2,0],
 "functions_enum.html":[0,2,2],
 "functions_func.html":[0,2,1],
 "index.html":[],
-"pages.html":[]
+"pages.html":[],
+"ui__gtk_8h_source.html":[1,0,0,0,1]
 };

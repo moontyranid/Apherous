@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>Apherous: home/jeroen/Programming/C++/Apherous/src/audio_mgr.h Source File</title>
+<title>Apherous: /home/jeroen/Programming/C++/Apherous/src/audio_mgr.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -116,48 +116,51 @@ $(document).ready(function(){initNavTree('audio__mgr_8h_source.html','');});
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;gst/gst.h&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classaudio_manager.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio_manager.html">audioManager</a></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">// Constructor and Destructor</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classaudio_manager.html">audioManager</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>  **argv);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    ~<a class="code" href="classaudio_manager.html">audioManager</a>();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">// Public routines</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classaudio_manager.html#a27cdb7486e1793df14a42fed62aaf673">setState</a>(<span class="keywordtype">int</span> state); <span class="comment">// Sets the state of the audio player</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classaudio_manager.html#ae8e0e3c82b018fda14157b1169bf76e3">setStream</a>(std::string uri);  <span class="comment">// Sets the stream to read from</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// Public variables</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2">   29</a></span>&#160;<span class="comment"></span>    <span class="keyword">enum class</span> <a class="code" href="classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2">audioStates</a></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2a6a216efc529825c60a4a4c0bc99ad77f">PLAY</a>, </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2a291554596c183e837f0a6bec3767c891">PAUSE</a>, </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2a615a46af313786fc4e349f34118be111">STOP</a> </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    };</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">// Private variables</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    GstElement *pipeline;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    GstBus *bus;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    GstMessage *msg;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    GError *gError;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif //BINARY_TO_ASCII_TRANSLATOR_AUDIO_MGR_H</span></div>
-<div class="ttc" id="classaudio_manager_html_aa37cded78cf789d8931208a0c6494af2"><div class="ttname"><a href="classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2">audioManager::audioStates</a></div><div class="ttdeci">audioStates</div><div class="ttdoc">An enumeration of the states that the audio manager can be in. </div><div class="ttdef"><b>Definition:</b> audio_mgr.h:29</div></div>
-<div class="ttc" id="classaudio_manager_html_a27cdb7486e1793df14a42fed62aaf673"><div class="ttname"><a href="classaudio_manager.html#a27cdb7486e1793df14a42fed62aaf673">audioManager::setState</a></div><div class="ttdeci">void setState(int state)</div><div class="ttdoc">Sets the state of the audio player. </div><div class="ttdef"><b>Definition:</b> audio_mgr.cpp:28</div></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;glib.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classaudio_manager.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classaudio_manager.html">audioManager</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">// Constructor and Destructor</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classaudio_manager.html">audioManager</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>  **argv);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    ~<a class="code" href="classaudio_manager.html">audioManager</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">// Public routines</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classaudio_manager.html#a27cdb7486e1793df14a42fed62aaf673">setState</a>(<span class="keywordtype">int</span> state); <span class="comment">// Sets the state of the audio player</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classaudio_manager.html#ae8e0e3c82b018fda14157b1169bf76e3">setStream</a>(std::string uri);  <span class="comment">// Sets the stream to read from</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">// Public variables</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2">   30</a></span>&#160;<span class="comment"></span>    <span class="keyword">enum class</span> <a class="code" href="classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2">audioStates</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2a6a216efc529825c60a4a4c0bc99ad77f">PLAY</a>, </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2a291554596c183e837f0a6bec3767c891">PAUSE</a>, </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2a615a46af313786fc4e349f34118be111">STOP</a> </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    };</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">// Private variables</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    GMainLoop *loop;         </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    guint bus_watch_id;      </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    GstElement *pipeline;    </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    GstBus *bus;             </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    GstMessage *msg;         </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    GError *gError = NULL;   </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif //BINARY_TO_ASCII_TRANSLATOR_AUDIO_MGR_H</span></div>
+<div class="ttc" id="classaudio_manager_html_aa37cded78cf789d8931208a0c6494af2"><div class="ttname"><a href="classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2">audioManager::audioStates</a></div><div class="ttdeci">audioStates</div><div class="ttdoc">An enumeration of the states that the audio manager can be in. </div><div class="ttdef"><b>Definition:</b> audio_mgr.h:30</div></div>
+<div class="ttc" id="classaudio_manager_html_a27cdb7486e1793df14a42fed62aaf673"><div class="ttname"><a href="classaudio_manager.html#a27cdb7486e1793df14a42fed62aaf673">audioManager::setState</a></div><div class="ttdeci">void setState(int state)</div><div class="ttdoc">Sets the state of the audio player. </div><div class="ttdef"><b>Definition:</b> audio_mgr.cpp:81</div></div>
 <div class="ttc" id="classaudio_manager_html_aa37cded78cf789d8931208a0c6494af2a615a46af313786fc4e349f34118be111"><div class="ttname"><a href="classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2a615a46af313786fc4e349f34118be111">audioManager::audioStates::STOP</a></div><div class="ttdoc">2 </div></div>
 <div class="ttc" id="classaudio_manager_html_aa37cded78cf789d8931208a0c6494af2a6a216efc529825c60a4a4c0bc99ad77f"><div class="ttname"><a href="classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2a6a216efc529825c60a4a4c0bc99ad77f">audioManager::audioStates::PLAY</a></div><div class="ttdoc">0 </div></div>
-<div class="ttc" id="classaudio_manager_html_ae8e0e3c82b018fda14157b1169bf76e3"><div class="ttname"><a href="classaudio_manager.html#ae8e0e3c82b018fda14157b1169bf76e3">audioManager::setStream</a></div><div class="ttdeci">void setStream(std::string uri)</div><div class="ttdoc">Sets the stream for the audio managerThis sets the audio stream/file to use for the audio player...</div><div class="ttdef"><b>Definition:</b> audio_mgr.cpp:63</div></div>
-<div class="ttc" id="classaudio_manager_html"><div class="ttname"><a href="classaudio_manager.html">audioManager</a></div><div class="ttdoc">Audio Manager. </div><div class="ttdef"><b>Definition:</b> audio_mgr.h:16</div></div>
+<div class="ttc" id="classaudio_manager_html_ae8e0e3c82b018fda14157b1169bf76e3"><div class="ttname"><a href="classaudio_manager.html#ae8e0e3c82b018fda14157b1169bf76e3">audioManager::setStream</a></div><div class="ttdeci">void setStream(std::string uri)</div><div class="ttdoc">Sets the stream for the audio managerThis sets the audio stream/file to use for the audio player...</div><div class="ttdef"><b>Definition:</b> audio_mgr.cpp:113</div></div>
+<div class="ttc" id="classaudio_manager_html"><div class="ttname"><a href="classaudio_manager.html">audioManager</a></div><div class="ttdoc">Audio Manager. </div><div class="ttdef"><b>Definition:</b> audio_mgr.h:17</div></div>
 <div class="ttc" id="classaudio_manager_html_aa37cded78cf789d8931208a0c6494af2a291554596c183e837f0a6bec3767c891"><div class="ttname"><a href="classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2a291554596c183e837f0a6bec3767c891">audioManager::audioStates::PAUSE</a></div><div class="ttdoc">1 </div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_75b82e7e4a5feb05200b9ad7adf06257.html">home</a></li><li class="navelem"><a class="el" href="dir_4b22e54d7b382c3fdc532ff2f9756cc8.html">jeroen</a></li><li class="navelem"><a class="el" href="dir_c751dbf8581811e217abef9b2e74f435.html">Programming</a></li><li class="navelem"><a class="el" href="dir_0fe90e84d828270282c9bd65c94f7e0b.html">C++</a></li><li class="navelem"><a class="el" href="dir_7ac739ee3fb1f44a4897aa6c63880818.html">Apherous</a></li><li class="navelem"><a class="el" href="dir_096157bb6ae6294e0a6936e8ba3a61ce.html">src</a></li><li class="navelem"><b>audio_mgr.h</b></li>
+    <li class="navelem"><a class="el" href="dir_a13819cf82ad6cf6b76e249e2687c215.html">Apherous</a></li><li class="navelem"><a class="el" href="dir_d0c92e01e4992f9368e8537032c7b135.html">src</a></li><li class="navelem"><b>audio_mgr.h</b></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
