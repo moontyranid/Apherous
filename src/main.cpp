@@ -4,8 +4,8 @@
  * Author:Jeroen Mathon
  */
 
-//#define GUI "gtk"
-#define GUI "cli"
+#define GUI "gtk"
+//#define GUI "cli"
 
 #include "audio_mgr.h"
 #include "ui_gtk.h"
@@ -17,7 +17,7 @@ int main(int argc, char **argv)
         Glib::RefPtr<Gtk::Application> app =
                 Gtk::Application::create(argc, argv, "Binary to Ascii Translator");
         gtkInterface gInterface;
-        gInterface.run();
+        gInterface.run(argc, argv);
 
         return app->run(*gInterface.window);
     }
