@@ -4,6 +4,17 @@
 
 #include "audio_mgr.h"
 
+/**
+ *****************************************************************************************
+ *  @brief      The gst bus callback.
+ *
+ *  @usage      This function collects data from the GLIB thread that manages the bus
+ *
+ *  @param      GstBus *bus: A pointer to the gst bus
+ *  @param      GstMessage *msg: A pointer to the GstMessage object that holds information returned by the bus thread
+ *  @param      gpointer data: the a pointer to the data that will be used in the thread
+ ******************************************************************************************
+ **/
 static gboolean bus_call(GstBus *bus, GstMessage *msg, gpointer data)
 {
     GMainLoop *loop = (GMainLoop *) data;
