@@ -30,10 +30,17 @@ private:
 
     // Private variables
     Glib::RefPtr<Gtk::Builder> builder = Gtk::Builder::create_from_file("ui/ui.glade");
+    Gtk::Box *mainBox;
     Gtk::Box *controlBox;
+    Gtk::Box *fileBox;
     Gtk::Button *playBtn;
     Gtk::Button *pauseBtn;
     Gtk::Button *stopBtn;
+    Gtk::Button *browseBtn;
+    Gtk::Button *addFileBtn;
+    Gtk::Statusbar *progressBar;
+    Gtk::Entry *pathEntry;
+
 
     audioManager *aManager;
     int _argc;

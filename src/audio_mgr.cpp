@@ -54,6 +54,7 @@ static gboolean bus_call(GstBus *bus, GstMessage *msg, gpointer data)
 
 audioManager::audioManager(int argc, char  **argv)
 {
+    pipeline = gst_element_factory_make("playbin", NULL);
     loop = g_main_loop_new(NULL, FALSE);
     bus = gst_pipeline_get_bus(GST_PIPELINE(pipeline));
     bus_watch_id = gst_bus_add_watch(bus, bus_call, loop);
