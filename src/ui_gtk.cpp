@@ -7,10 +7,16 @@
 gtkInterface::gtkInterface()
 {
     builder->get_widget("window", window);
+    builder->get_widget("mainBox", mainBox);
+    builder->get_widget("fileBox", fileBox);
     builder->get_widget("controlBox", controlBox);
     builder->get_widget("playBtn", playBtn);
     builder->get_widget("pauseBtn", pauseBtn);
     builder->get_widget("stopBtn", stopBtn);
+    builder->get_widget("browseBtn", browseBtn);
+    builder->get_widget("addFileBtn", addFileBtn);
+    builder->get_widget("progressBar", progressBar);
+    builder->get_widget("pathEntry", pathEntry);
 
     playBtn->signal_clicked().connect(sigc::mem_fun(this, &gtkInterface::playBtnOnClick));
     pauseBtn->signal_clicked().connect(sigc::mem_fun(this, &gtkInterface::pauseBtnOnClick));
