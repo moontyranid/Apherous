@@ -66,8 +66,9 @@ void gtkInterface::pauseBtnOnClick()
  **/
 void gtkInterface::stopBtnOnClick()
 {
-    aManager->setState(int(audioManager::audioStates::STOP));
-    std::cout << "Stopping\n";
+    //aManager->setState(int(audioManager::audioStates::STOP));
+    //std::cout << "Stopping\n";
+    aManager->getSongLength();
 }
 
 /**

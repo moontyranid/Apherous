@@ -122,3 +122,24 @@ void audioManager::setStream(std::string uri)
         std::cout << "Glib Error:" << gError->message << "\n";
     }
 }
+
+/**
+ *****************************************************************************************
+ *  @brief      Returns the length of the current song
+ *-
+ *  @usage      Fetches and returns the length of the current song
+ ******************************************************************************************
+ **/
+float audioManager::getSongLength()
+{
+    GstFormat format = GST_FORMAT_TIME;
+    int time  = pipeline->d
+    gint64 pos, len;
+    if(gst_element_query_position(pipeline, GST_FORMAT_TIME, &pos)
+            && gst_element_query_duration(pipeline, GST_FORMAT_TIME, &len))
+    {
+        std::cout << "Length:" << GST_TIME_FORMAT << GST_TIME_FORMAT << GST_TIME_ARGS(pos) << GST_TIME_ARGS(len);
+    }
+
+    return 0.0f;
+}

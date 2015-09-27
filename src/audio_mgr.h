@@ -24,6 +24,7 @@ public:
     // Public routines
     void setState(int state); // Sets the state of the audio player
     void setStream(std::string uri);  // Sets the stream to read from
+    float getSongLength(); // Returns the length of the current song
 
     // Public variables
     /// An enumeration of the states that the audio manager can be in
