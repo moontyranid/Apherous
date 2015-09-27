@@ -6,18 +6,24 @@
 
 gtkInterface::gtkInterface()
 {
+    // Set up the main window and box
     builder->get_widget("window", window);
     builder->get_widget("mainBox", mainBox);
+
+    // Set up the Filebox
     builder->get_widget("fileBox", fileBox);
+    builder->get_widget("browseBtn", browseBtn);
+    builder->get_widget("addFileBtn", addFileBtn);
+    builder->get_widget("pathEntry", pathEntry);
+
+    // Set up the Controlbox
     builder->get_widget("controlBox", controlBox);
     builder->get_widget("playBtn", playBtn);
     builder->get_widget("pauseBtn", pauseBtn);
     builder->get_widget("stopBtn", stopBtn);
-    builder->get_widget("browseBtn", browseBtn);
-    builder->get_widget("addFileBtn", addFileBtn);
     builder->get_widget("progressBar", progressBar);
-    builder->get_widget("pathEntry", pathEntry);
 
+    // Connect all the buttons to their event handlers
     playBtn->signal_clicked().connect(sigc::mem_fun(this, &gtkInterface::playBtnOnClick));
     pauseBtn->signal_clicked().connect(sigc::mem_fun(this, &gtkInterface::pauseBtnOnClick));
     stopBtn->signal_clicked().connect(sigc::mem_fun(this, &gtkInterface::stopBtnOnClick));

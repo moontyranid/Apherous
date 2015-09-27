@@ -22,7 +22,7 @@ int main(int argc, char **argv)
         return app->run(*gInterface.window);
     }
 
-
+    // TODO:Implement a CLI Interface
     else if(GUI == "cli")
     {
         audioManager aManager(argc, argv);
