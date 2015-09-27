@@ -140,12 +140,12 @@ $(document).ready(function(){initNavTree('audio__mgr_8h_source.html','');});
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">// Private variables</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    GMainLoop *loop;         </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    guint bus_watch_id;      </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    GstElement *pipeline;    </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    GstBus *bus;             </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    GstMessage *msg;         </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    GError *gError = NULL;   </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    GMainLoop *loop;         <span class="comment">// The GLIB&#39;s main loop to be used in the class.</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    guint bus_watch_id;      <span class="comment">// The id of the bus watch</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    GstElement *pipeline;    <span class="comment">// The pipe line to use for the audio</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    GstBus *bus;             <span class="comment">// The bus to relay messages trough</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    GstMessage *msg;         <span class="comment">// The message for the bus</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    GError *gError = NULL;   <span class="comment">// The error container</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif //BINARY_TO_ASCII_TRANSLATOR_AUDIO_MGR_H</span></div>
 <div class="ttc" id="classaudio_manager_html_aa37cded78cf789d8931208a0c6494af2"><div class="ttname"><a href="classaudio_manager.html#aa37cded78cf789d8931208a0c6494af2">audioManager::audioStates</a></div><div class="ttdeci">audioStates</div><div class="ttdoc">An enumeration of the states that the audio manager can be in. </div><div class="ttdef"><b>Definition:</b> audio_mgr.h:30</div></div>

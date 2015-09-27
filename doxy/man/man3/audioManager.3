@@ -1,0 +1,93 @@
+.TH "audioManager" 3 "Sun Sep 27 2015" "Apherous" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+audioManager \- Audio Manager\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <audio_mgr\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBaudioStates\fP { \fBaudioStates::PLAY\fP, \fBaudioStates::PAUSE\fP, \fBaudioStates::STOP\fP }
+.RI "\fIAn enumeration of the states that the audio manager can be in\&. \fP""
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBaudioManager\fP (int argc, char **argv)"
+.br
+.ti -1c
+.RI "void \fBsetState\fP (int state)"
+.br
+.RI "\fISets the state of the audio player\&. \fP"
+.ti -1c
+.RI "void \fBsetStream\fP (std::string uri)"
+.br
+.RI "\fISets the stream for the audio manager
+.IP "\(bu" 2
+This sets the audio stream/file to use for the audio player\&. 
+.PP
+\fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Audio Manager\&. 
+
+This class contains a set of functions for controlling the audio in the program\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBaudioManager::audioStates\fP\fC [strong]\fP"
+
+.PP
+An enumeration of the states that the audio manager can be in\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIPLAY \fP\fP
+0 
+.TP
+\fB\fIPAUSE \fP\fP
+1 
+.TP
+\fB\fISTOP \fP\fP
+2 
+.SH "Member Function Documentation"
+.PP 
+.SS "void audioManager::setState (int state)"
+
+.PP
+Sets the state of the audio player\&. This function can be called from the \fBaudioManager\fP class
+.PP
+\fBParameters:\fP
+.RS 4
+\fIint\fP state: The state top put the audio player in\&.(Being PLAY,PAUSE or STOP) 
+.RE
+.PP
+
+.SS "void audioManager::setStream (std::string uri)"
+
+.PP
+Sets the stream for the audio manager
+.IP "\(bu" 2
+This sets the audio stream/file to use for the audio player\&. 
+.PP
+
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstd::string\fP uri: The URI used for the audio player 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Apherous from the source code\&.
