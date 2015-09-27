@@ -21,6 +21,8 @@ gtkInterface::gtkInterface()
     playBtn->signal_clicked().connect(sigc::mem_fun(this, &gtkInterface::playBtnOnClick));
     pauseBtn->signal_clicked().connect(sigc::mem_fun(this, &gtkInterface::pauseBtnOnClick));
     stopBtn->signal_clicked().connect(sigc::mem_fun(this, &gtkInterface::stopBtnOnClick));
+    browseBtn->signal_clicked().connect(sigc::mem_fun(this, &gtkInterface::browseBtnOnClick));
+    addFileBtn->signal_clicked().connect(sigc::mem_fun(this, &gtkInterface::addFileBtnOnClick));
 }
 
 gtkInterface::~gtkInterface()
@@ -33,12 +35,10 @@ gtkInterface::~gtkInterface()
  *  @brief      OnClick() event handler for the start Button
  *
  *  @usage      Manages the actions to be performed when the OnClick() event is called
- *
  ******************************************************************************************
  **/
 void gtkInterface::playBtnOnClick()
 {
-    std::cout << "Playing\n";
     aManager->setState(int(audioManager::audioStates::PLAY));
 }
 
@@ -47,12 +47,10 @@ void gtkInterface::playBtnOnClick()
  *  @brief      OnClick() event handler for the pause Button
  *
  *  @usage      Manages the actions to be performed when the OnClick() event is called
- *
  ******************************************************************************************
  **/
 void gtkInterface::pauseBtnOnClick()
 {
-    std::cout << "Pausing\n";
     aManager->setState(int(audioManager::audioStates::PAUSE));
 }
 
@@ -61,13 +59,37 @@ void gtkInterface::pauseBtnOnClick()
  *  @brief      OnClick() event handler for the stop Button
  *
  *  @usage      Manages the actions to be performed when the OnClick() event is called
- *
  ******************************************************************************************
  **/
 void gtkInterface::stopBtnOnClick()
 {
     aManager->setState(int(audioManager::audioStates::STOP));
-    std::cout << "Stopping\n";
+}
+
+/**
+ *****************************************************************************************
+ *  @brief      OnClick() event handler for the browse Button
+ *
+ *  @usage      Manages the actions to be performed when the OnClick() event is called
+ ******************************************************************************************
+ **/
+void gtkInterface::browseBtnOnClick()
+{
+
+}
+
+/**
+ *****************************************************************************************
+ *  @brief      OnClick() event handler for the addFile Button
+ *
+ *  @usage      Manages the actions to be performed when the OnClick() event is called
+ ******************************************************************************************
+ **/
+void gtkInterface::addFileBtnOnClick()
+{
+    std::stringstream path;
+    path << "file://" << pathEntry->get_text();
+    aManager->setStream(path.str());
 }
 
 /**
@@ -85,6 +107,5 @@ int gtkInterface::run(int argc, char **argv)
     _argc = argc;
     _argv = argv;
     aManager = new audioManager(_argc, _argv);
-    aManager->setStream("file:///home/jeroen/test.mp3");
     window->show();
 }
