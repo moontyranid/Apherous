@@ -106,7 +106,7 @@ void audioManager::setState(int state)
 /**
  *****************************************************************************************
  *  @brief      Sets the stream for the audio manager
- *-
+ *
  *  @usage      This sets the audio stream/file to use for the audio player
  *
  *  @param      std::string uri: The URI used for the audio player
@@ -124,4 +124,18 @@ void audioManager::setStream(std::string uri)
     {
         std::cout << "Glib Error:" << gError->message << "\n";
     }
+}
+
+/**
+ *****************************************************************************************
+ *  @brief      Adds an uri to the queue
+ *
+ *  @usage      Adds an uri to the queue so it can be played later
+ *
+ *  @param      std::string uri: The URI to add to the queue
+ ******************************************************************************************
+ **/
+void audioManager::addToQueue(std::string uri)
+{
+    uriQueue.push_back(uri);
 }
