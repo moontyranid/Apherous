@@ -54,15 +54,16 @@ static gboolean bus_call(GstBus *bus, GstMessage *msg, gpointer data)
 
 audioManager::audioManager(int argc, char  **argv)
 {
-    pipeline = gst_element_factory_make("playbin", NULL);
-    loop = g_main_loop_new(NULL, FALSE);
-    bus = gst_pipeline_get_bus(GST_PIPELINE(pipeline));
-    bus_watch_id = gst_bus_add_watch(bus, bus_call, loop);
-    gst_init(&argc, &argv);
+    pipeline = gst_element_factory_make("playbin", NULL); // Initialize the pipeline
+    loop = g_main_loop_new(NULL, FALSE);                  // Create a new loop
+    bus = gst_pipeline_get_bus(GST_PIPELINE(pipeline));   // Initialize the asynchronous message bus
+    bus_watch_id = gst_bus_add_watch(bus, bus_call, loop);// Add the asynchronous message bus to the main loop
+    gst_init(&argc, &argv);                               // Initialize GStreamer
 }
 
 audioManager::~audioManager()
 {
+    // Clean up objects
     gst_message_unref(msg);
     gst_object_unref(bus);
     gst_element_set_state(pipeline, GST_STATE_NULL);
@@ -83,17 +84,17 @@ void audioManager::setState(int state)
 {
     switch(state)
     {
-        case int(audioStates::PLAY):
+        case int(audioStates::PLAY):    // Sets audio state to play
         {
             gst_element_set_state(pipeline, GST_STATE_PLAYING);
             break;
         }
 
-        case int(audioStates::PAUSE):
+        case int(audioStates::PAUSE):   // Sets audio state to pause
             gst_element_set_state(pipeline, GST_STATE_PAUSED);
             break;
 
-        case int(audioStates::STOP):
+        case int(audioStates::STOP):    // Sets audio state to stop
             gst_element_set_state(pipeline, GST_STATE_NULL);
             break;
 
@@ -113,9 +114,11 @@ void audioManager::setState(int state)
  **/
 void audioManager::setStream(std::string uri)
 {
+    // Assemble uri
     std::stringstream uriStream;
     uriStream << "playbin uri=\"" << uri << "\"";
 
+    // Set stream to uri
     pipeline = gst_parse_launch(uriStream.str().c_str(), &gError);
     if(gError != nullptr)
     {

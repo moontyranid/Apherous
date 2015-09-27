@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <gtkmm.h>
+#include <sstream>
 #include "audio_mgr.h"
 
 class gtkInterface
@@ -24,23 +25,29 @@ public:
 
 private:
     // Private routines
-    void playBtnOnClick();
-    void pauseBtnOnClick();
-    void stopBtnOnClick();
+
+    // Button event handlers
+    void playBtnOnClick();      void pauseBtnOnClick();
+    void stopBtnOnClick();      void browseBtnOnClick();
+    void addFileBtnOnClick();
 
     // Private variables
     Glib::RefPtr<Gtk::Builder> builder = Gtk::Builder::create_from_file("ui/ui.glade");
+
     Gtk::Box *mainBox;
+
+    // Control box
     Gtk::Box *controlBox;
-    Gtk::Box *fileBox;
     Gtk::Button *playBtn;
     Gtk::Button *pauseBtn;
     Gtk::Button *stopBtn;
+    Gtk::Statusbar *progressBar;
+
+    // Filebox
+    Gtk::Box *fileBox;
     Gtk::Button *browseBtn;
     Gtk::Button *addFileBtn;
-    Gtk::Statusbar *progressBar;
     Gtk::Entry *pathEntry;
-
 
     audioManager *aManager;
     int _argc;
