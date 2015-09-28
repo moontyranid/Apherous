@@ -29,7 +29,8 @@ private:
     // Button event handlers
     void playBtnOnClick();      void pauseBtnOnClick();
     void stopBtnOnClick();      void browseBtnOnClick();
-    void addFileBtnOnClick();
+    void addFileBtnOnClick();   void prevBtnOnClick();
+    void nextBtnOnClick();
 
     // Private variables
     Glib::RefPtr<Gtk::Builder> builder = Gtk::Builder::create_from_file("ui/ui.glade");
@@ -41,6 +42,8 @@ private:
     Gtk::Button *playBtn;
     Gtk::Button *pauseBtn;
     Gtk::Button *stopBtn;
+    Gtk::Button *prevBtn;
+    Gtk::Button *nextBtn;
     Gtk::Statusbar *progressBar;
 
     // Filebox

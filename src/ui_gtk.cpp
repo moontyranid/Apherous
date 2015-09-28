@@ -48,49 +48,21 @@ void gtkInterface::playBtnOnClick()
     aManager->setState(int(audioManager::audioStates::PLAY));
 }
 
-/**
- *****************************************************************************************
- *  @brief      OnClick() event handler for the pause Button
- *
- *  @usage      Manages the actions to be performed when the OnClick() event is called
- ******************************************************************************************
- **/
 void gtkInterface::pauseBtnOnClick()
 {
     aManager->setState(int(audioManager::audioStates::PAUSE));
 }
 
-/**
- *****************************************************************************************
- *  @brief      OnClick() event handler for the stop Button
- *
- *  @usage      Manages the actions to be performed when the OnClick() event is called
- ******************************************************************************************
- **/
 void gtkInterface::stopBtnOnClick()
 {
     aManager->setState(int(audioManager::audioStates::STOP));
 }
 
-/**
- *****************************************************************************************
- *  @brief      OnClick() event handler for the browse Button
- *
- *  @usage      Manages the actions to be performed when the OnClick() event is called
- ******************************************************************************************
- **/
 void gtkInterface::browseBtnOnClick()
 {
 
 }
 
-/**
- *****************************************************************************************
- *  @brief      OnClick() event handler for the addFile Button
- *
- *  @usage      Manages the actions to be performed when the OnClick() event is called
- ******************************************************************************************
- **/
 void gtkInterface::addFileBtnOnClick()
 {
     std::stringstream path;
