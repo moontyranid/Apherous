@@ -21,6 +21,8 @@ gtkInterface::gtkInterface()
     builder->get_widget("playBtn", playBtn);
     builder->get_widget("pauseBtn", pauseBtn);
     builder->get_widget("stopBtn", stopBtn);
+    builder->get_widget("prevBtn", prevBtn);
+    builder->get_widget("nextBtn", nextBtn);
     builder->get_widget("progressBar", progressBar);
 
     // Connect all the buttons to their event handlers
@@ -29,6 +31,9 @@ gtkInterface::gtkInterface()
     stopBtn->signal_clicked().connect(sigc::mem_fun(this, &gtkInterface::stopBtnOnClick));
     browseBtn->signal_clicked().connect(sigc::mem_fun(this, &gtkInterface::browseBtnOnClick));
     addFileBtn->signal_clicked().connect(sigc::mem_fun(this, &gtkInterface::addFileBtnOnClick));
+    prevBtn->signal_clicked().connect(sigc::mem_fun(this, &gtkInterface::prevBtnOnClick));
+    nextBtn->signal_clicked().connect(sigc::mem_fun(this, &gtkInterface::nextBtnOnClick));
+
 }
 
 gtkInterface::~gtkInterface()
