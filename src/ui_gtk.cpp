@@ -36,13 +36,7 @@ gtkInterface::~gtkInterface()
 
 }
 
-/**
- *****************************************************************************************
- *  @brief      OnClick() event handler for the start Button
- *
- *  @usage      Manages the actions to be performed when the OnClick() event is called
- ******************************************************************************************
- **/
+// Button event handlers
 void gtkInterface::playBtnOnClick()
 {
     aManager->setState(int(audioManager::audioStates::PLAY));
@@ -68,6 +62,16 @@ void gtkInterface::addFileBtnOnClick()
     std::stringstream path;
     path << "file://" << pathEntry->get_text();
     aManager->setStream(path.str());
+}
+
+void gtkInterface::prevBtnOnClick()
+{
+
+}
+
+void gtkInterface::nextBtnOnClick()
+{
+
 }
 
 /**
