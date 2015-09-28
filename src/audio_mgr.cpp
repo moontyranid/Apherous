@@ -125,17 +125,3 @@ void audioManager::setStream(std::string uri)
         std::cout << "Glib Error:" << gError->message << "\n";
     }
 }
-
-/**
- *****************************************************************************************
- *  @brief      Adds an uri to the queue
- *
- *  @usage      Adds an uri to the queue so it can be played later
- *
- *  @param      std::string uri: The URI to add to the queue
- ******************************************************************************************
- **/
-void audioManager::addToQueue(std::string uri)
-{
-    uriQueue.push_back(uri);
-}

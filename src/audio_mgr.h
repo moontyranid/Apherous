@@ -25,7 +25,6 @@ public:
     // Public routines
     void setState(int state); // Sets the state of the audio player
     void setStream(std::string uri);  // Sets the stream to read from
-    void addToQueue(std::string uri);
 
     // Public variables
     /// An enumeration of the states that the audio manager can be in
@@ -44,7 +43,5 @@ private:
     GstBus *bus;             // The bus to relay messages trough
     GstMessage *msg;         // The message for the bus
     GError *gError = NULL;   // The error container
-    std::vector uriQueue;    // A queue holding the uri's to be played
-
 };
 #endif //BINARY_TO_ASCII_TRANSLATOR_AUDIO_MGR_H
