@@ -29,6 +29,9 @@ gtkInterface::gtkInterface()
     stopBtn->signal_clicked().connect(sigc::mem_fun(this, &gtkInterface::stopBtnOnClick));
     browseBtn->signal_clicked().connect(sigc::mem_fun(this, &gtkInterface::browseBtnOnClick));
     addFileBtn->signal_clicked().connect(sigc::mem_fun(this, &gtkInterface::addFileBtnOnClick));
+    prevBtn->signal_clicked().connect(sigc::mem_fun(this, &gtkInterface::prevBtnOnClick));
+    nextBtn->signal_clicked().connect(sigc::mem_fun(this, &gtkInterface::nextBtn));
+
 }
 
 gtkInterface::~gtkInterface()
